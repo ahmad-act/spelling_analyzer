@@ -25,6 +25,7 @@ Featuring both a Python API and a convenient command-line interface (CLI), Spell
 6. [Usage](#-usage)  
    - [Python API](#-python-api)  
    - [Command-Line Interface (CLI)](#-command-line-interface-cli)  
+   - [Git Hook](#-git-hook)
 7. [Troubleshooting](#-troubleshooting)  
 8. [Testing](#-testing)  
 
