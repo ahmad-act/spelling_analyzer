@@ -1,0 +1,4 @@
+pyspellchecker
+
+# Dev
+coverage.py
