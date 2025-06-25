@@ -336,6 +336,40 @@ Example:
 spelling-analyzer "D:\My Study\Coding\code_analyzer_v2\TestProject" --output "D:\My Study\Coding\code_analyzer_v2\report.json"
 ```
 
+### 🪝 Git Hook
+
+1. Copy the batch file `create-pre-commit-hook.bat` from the `Usage` folder to the root of your target project.  
+
+2. Run the batch file:
+
+    ```bash
+    create-pre-commit-hook.bat
+    ```
+
+    This will create a `pre-commit` hook at:
+
+    ```
+    <Project-Folder>\.git\hooks\pre-commit
+    ```
+
+    #### Sample `pre-commit` Hook File:
+
+    ```sh
+    #!/bin/sh
+
+    echo "Running spelling-analyzer on current project..."
+
+    spelling-analyzer "." --output "./spelling_report.json" --fail-on code,comment
+    RESULT=$?
+
+    if [ $RESULT -ne 0 ]; then
+    echo "spelling-analyzer detected issues in code or comments."
+    echo "Commit aborted. Please fix the spelling issues."
+    exit 1
+    fi
+
+    exit 0
+    ```
 
 ---
 
