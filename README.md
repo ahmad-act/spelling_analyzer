@@ -344,23 +344,29 @@ Look for `spelling-analyzer`. Editable installs point to your local directory.
 pip uninstall spelling-analyzer
 ```
 
+### 🗑️ Uninstall all Packages
+
+```bash
+pip freeze > unins ; pip uninstall -y -r unins ; del unins
+```
+
 ---
 
-## 🧪 Testing
+## 📄 Testing
 
-1. **Run all tests:**
+1. **✅ Run all tests:**
 
     ```bash
     python -m unittest discover -s tests
     ```
 
-2. **Run tests with coverage:**
+2. **🧪 Run tests with coverage:**
 
     ```bash
     coverage run -m unittest discover -s tests
     ```
 
-3. **To see the coverage report:**
+3. **📊 Generate a Coverage Report (Terminal):**
 
     ```bash
     coverage report -m
@@ -384,7 +390,7 @@ pip uninstall spelling-analyzer
     TOTAL                                       219      9    96%
     ```
 
-4. **Generate an HTML report:**
+4. **🌐 Generate an HTML Report (Optional):**
 
     ```bash
     coverage html
@@ -392,10 +398,17 @@ pip uninstall spelling-analyzer
 
     - Open **htmlcov/index.html** in your browser to see detailed coverage.
 
-5. **Run tests with pytest:**
+5. **🧹 Clean Up Coverage Files (Optional):**
+
+    ```bash
+    coverage erase
+    ```
+
+6. **🔁 Run tests with pytest:**
 
     ```bash
     pytest tests
     ```
+
 ---
 
