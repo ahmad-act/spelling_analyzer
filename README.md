@@ -318,11 +318,24 @@ Run the analysis from your terminal:
 spelling-analyzer "<path/to/project>" --output "<path/to/output/report.json>"
 ```
 
+Fail only on "code" source errors (default):
+
+```bash
+spelling-analyzer "D:\My Project" --output "D:\Output Folder\report.json"
+```
+
+Fail on both "code" and "comment" source errors:
+
+```bash
+spelling-analyzer "D:\My Project" --output "D:\Output Folder\report.json" --fail-on code,comment
+```
+
 Example:
 
 ```bash
 spelling-analyzer "D:\My Study\Coding\code_analyzer_v2\TestProject" --output "D:\My Study\Coding\code_analyzer_v2\report.json"
 ```
+
 
 ---
 
